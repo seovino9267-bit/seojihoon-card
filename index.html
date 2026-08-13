@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>서지훈 행정사 · 서지훈행정사사무소</title>
+<meta name="description" content="행정의 언어를, 당신의 언어로.">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="서지훈행정사사무소">
+<meta property="og:title" content="서지훈 행정사 · 서지훈행정사사무소">
+<meta property="og:description" content="행정의 언어를, 당신의 언어로.">
+<meta name="twitter:card" content="summary">
+<!-- build: 2026-08-13T10:54 -->
+
+<style>
+:root{
+  --page-bg:#F5F5F4;
+  --card-bg:#FFFFFF;
+  --fg:#15181D;
+  --muted:#6B7280;
+  --accent:#2F6FE0;
+  --accent-soft:#EAF1FE;
+  --accent-dark:#16345C;
+  --accent-contrast:#FFFFFF;
+  --line:#ECECEA;
+  --shadow:0 1px 2px rgba(20,20,20,.04), 0 8px 24px rgba(20,20,20,.06);
+  --badge-a-bg:#EAF1FE; --badge-a-fg:#2F6FE0;
+  --badge-b-bg:#FBEFE1; --badge-b-fg:#B4691A;
+  --badge-c-bg:#E7F6F0; --badge-c-fg:#1F9067;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --page-bg:#101114;
+    --card-bg:#1B1D22;
+    --fg:#ECEDEF;
+    --muted:#9AA0AC;
+    --accent:#7FA8F2;
+    --accent-soft:#22304A;
+    --accent-dark:#7FA8F2;
+    --accent-contrast:#101114;
+    --line:#2B2D33;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    --badge-a-bg:#20304A; --badge-a-fg:#7FA8F2;
+    --badge-b-bg:#3A2A18; --badge-b-fg:#E3A45F;
+    --badge-c-bg:#173428; --badge-c-fg:#5BC79A;
+  }
+}
+:root[data-theme="dark"]{
+  --page-bg:#101114;
+  --card-bg:#1B1D22;
+  --fg:#ECEDEF;
+  --muted:#9AA0AC;
+  --accent:#7FA8F2;
+  --accent-soft:#22304A;
+  --accent-dark:#7FA8F2;
+  --accent-contrast:#101114;
+  --line:#2B2D33;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  --badge-a-bg:#20304A; --badge-a-fg:#7FA8F2;
+  --badge-b-bg:#3A2A18; --badge-b-fg:#E3A45F;
+  --badge-c-bg:#173428; --badge-c-fg:#5BC79A;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--page-bg);
+  color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+  display:flex;
+  justify-content:center;
+  padding:32px 16px 56px;
+}
+.page{width:100%;max-width:420px;display:flex;flex-direction:column;gap:20px}
+
+.card{
+  background:var(--card-bg);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  padding:32px 26px;
+}
+
+/* ---- 프로필 카드 ---- */
+.profile-card{display:flex;flex-direction:column;align-items:center;text-align:center}
+.avatar{
+  width:104px;height:104px;border-radius:50%;
+  object-fit:cover;object-position:top center;
+  box-shadow:0 0 0 4px var(--card-bg), 0 0 0 5px var(--line);
+  margin-bottom:18px;
+}
+.name{
+  margin:0;font-size:1.7rem;font-weight:800;
+  letter-spacing:.28em;padding-left:.28em;
+  text-wrap:balance;
+}
+.romanization{margin:6px 0 0;font-size:.85rem;color:var(--muted);letter-spacing:.02em}
+
+.divider{width:28px;height:1px;background:var(--line);margin:18px 0}
+
+.office{margin:0;font-size:.9rem;font-weight:600;color:var(--accent)}
+.role{margin:4px 0 0;font-size:1.02rem;font-weight:700}
+.tagline{margin:14px 0 0;font-size:.92rem;color:var(--muted);max-width:26ch}
+.tagline-sub{display:inline-block;margin-top:6px}
+
+.icon-buttons{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;width:100%;margin-top:26px}
+.icon-btn{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  padding:16px 8px;border:1px solid var(--line);border-radius:16px;
+  text-decoration:none;color:var(--fg);font-size:.82rem;font-weight:600;
+}
+.icon-circle{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--accent-soft);color:var(--accent);
+}
+.icon-circle svg{width:19px;height:19px}
+
+.cta{
+  display:block;width:100%;margin-top:12px;
+  background:var(--accent-dark);color:var(--accent-contrast);
+  text-align:center;padding:15px;border-radius:14px;
+  font-size:.96rem;font-weight:700;text-decoration:none;
+}
+
+/* ---- 섹션 공통 ---- */
+.section-title{
+  display:flex;align-items:center;gap:8px;
+  margin:0 0 12px 4px;font-size:.95rem;font-weight:800;
+}
+.section-title .count{
+  font-size:.78rem;font-weight:700;color:var(--muted);
+  background:var(--line);border-radius:999px;padding:1px 9px;
+}
+
+/* ---- 전문 분야 리스트 ---- */
+.list{display:flex;flex-direction:column;gap:10px}
+.list-item{
+  display:flex;align-items:center;gap:14px;
+  background:var(--card-bg);border-radius:16px;box-shadow:var(--shadow);
+  padding:14px 16px;text-decoration:none;color:var(--fg);
+}
+.badge{
+  flex:none;width:42px;height:42px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+}
+.badge svg{width:21px;height:21px}
+.badge-a{background:var(--badge-a-bg);color:var(--badge-a-fg)}
+.badge-b{background:var(--badge-b-bg);color:var(--badge-b-fg)}
+.badge-c{background:var(--badge-c-bg);color:var(--badge-c-fg)}
+.li-text{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}
+.li-text strong{font-size:.98rem;font-weight:700}
+.li-text span{font-size:.8rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chevron{flex:none;color:var(--muted)}
+.chevron svg{width:18px;height:18px;display:block}
+
+/* ---- 활동 갤러리 ---- */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gallery figure{margin:0}
+.gallery a{display:block}
+.gallery img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;
+  border-radius:12px;display:block;
+}
+.gallery figcaption{margin-top:6px;font-size:.7rem;color:var(--muted);line-height:1.4}
+.gallery figcaption .note{display:inline-block;margin-top:2px;font-size:.65rem;opacity:.75}
+
+/* ---- 푸터 ---- */
+.foot{text-align:center;font-size:.78rem;color:var(--muted);padding:4px 0}
+.foot p{margin:0 0 4px}
+
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+@media print{
+  body{background:#fff;color:#000;padding:20px}
+  .card,.list-item{box-shadow:none;border:1px solid #ccc}
+  .cta{background:#fff !important;color:#000 !important;border:1px solid #999}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="card profile-card">
+    <img class="avatar" src="img/profile.jpg" alt="서지훈 행정사 프로필 사진">
+    <h1 class="name">서지훈</h1>
+    <p class="romanization">Seo Ji-hoon</p>
+    <div class="divider"></div>
+    <p class="office">서지훈행정사사무소</p>
+    <p class="role">행정사</p>
+    <p class="tagline">행정의 언어를, 당신의 언어로.<br><span class="tagline-sub">복잡한 행정 절차, 더 이상 혼자 고민하지 마세요.</span></p>
+
+    <div class="icon-buttons">
+      <a class="icon-btn" href="tel:010-5953-5995">
+        <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+        전화
+      </a>
+      <a class="icon-btn" href="mailto:seo_lawlaw@naver.com">
+        <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        이메일
+      </a>
+    </div>
+
+    <a class="cta" href="data:text/vcard;charset=utf-8;base64,QkVHSU46VkNBUkQNClZFUlNJT046My4wDQpOOuyEnDvsp4Dtm4g7OzsNCkZOOuyEnOyngO2biA0KT1JHOuyEnOyngO2biO2WieygleyCrOyCrOustOyGjA0KVElUTEU67ZaJ7KCV7IKsDQpURUw7VFlQRT1XT1JLLFZPSUNFOjAxMC01OTUzLTU5OTUNCkVNQUlMOnNlb19sYXdsYXdAbmF2ZXIuY29tDQpFTkQ6VkNBUkQNCg==">연락처 추가</a>
+  </section>
+
+  <section>
+    <h2 class="section-title">전문 분야 <span class="count">3</span></h2>
+    <div class="list">
+      <a class="list-item" href="https://blog.naver.com/seo_law_law">
+        <span class="badge badge-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 12h5M9.5 15.5h5"/></svg></span>
+        <span class="li-text"><strong>손실보상</strong><span>토지·건물·영업·지장물보상</span></span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="list-item" href="https://blog.naver.com/altruism_of_seo">
+        <span class="badge badge-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M8 11h2M8 15h2M14 7h2M14 11h2M14 15h2"/><path d="M10 21v-4h4v4"/></svg></span>
+        <span class="li-text"><strong>기업 인허가</strong><span>신청 전 리스크 점검·인허가 전략</span></span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="list-item" href="https://blog.naver.com/seo_lawlaw/224224319550">
+        <span class="badge badge-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M9 16h6"/></svg></span>
+        <span class="li-text"><strong>출입국·비자</strong><span>체류기간 연장·자격변경·재신청</span></span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">활동</h2>
+    <div class="gallery">
+      <figure>
+        <a href="https://www.youtube.com/watch?v=fee6yzeJK8c&t=112s" target="_blank" rel="noopener noreferrer">
+          <img src="img/interview.jpg" alt="한국경제TV 인터뷰 장면 — 누르면 해당 발언 구간으로 이동">
+        </a>
+        <figcaption>한국경제TV 인터뷰<br><span class="note">누르면 발언 구간 재생</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/crowd.jpg" alt="삼전동 모아타운 주민설명회 현장 (참석자 얼굴은 모자이크 처리함)">
+        <figcaption>모아타운 주민설명회<br><span class="note">참석자 보호를 위해 모자이크 처리</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/podium.jpg" alt="모아타운 주민설명회 강연 장면">
+        <figcaption>주민설명회 강연</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>서지훈행정사사무소</p>
+    <p>© 2026 서지훈행정사사무소</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
