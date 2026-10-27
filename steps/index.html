@@ -1,0 +1,262 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>보상 절차 한 바퀴 · 서지훈행정사사무소</title>
+<meta name="description" content="보상 절차 한 바퀴 · 서지훈행정사사무소 손실보상 글 모음">
+<style>
+/* 사무소_토큰 v1 — 서지훈행정사사무소 HTML 디자인 토큰 (2026-10-05 신설)
+
+   출처: .claude/skills/office-deck/SKILL.md 1절 「기준 4칸」(남색 카드 소개서, 2026-09-24 확정).
+   PPT가 이미 쓰는 색·글꼴을 HTML·아티팩트·현황판·전자명함이 그대로 쓰게 하는 한 장이다.
+   AI가 색과 글꼴을 매번 새로 정하지 않게 하는 것이 목적이다 — 「AI가 결정할 선택지를 줄인다」.
+
+   쓰는 법
+   1) 창고 안 HTML:   <link rel="stylesheet" href="../tools/design/사무소_토큰.css">
+   2) 아티팩트·단일 파일: 아래 :root 블록(어두운 모드 포함)을 <style> 맨 앞에 그대로 복사한다.
+      첫 줄 주석 「사무소_토큰 v1」을 남긴다 — tools/ai_ti_check.py 가 그 표시로 토큰 사용 여부를 안다.
+   3) 색은 변수만 쓴다. 새 색이 필요하면 이 파일에 먼저 더하고 쓴다(파일마다 다른 색 금지).
+   4) 흑백 공문형 전단·우편물은 자기 기준본(송파 흑백 공문)이 따로 있다 — 이 파일을 쓰지 않는다.
+   5) 글자 사이를 벌리지 않는다(letter-spacing 0). 제목 밑줄·장식 띠·카드 옆 띠를 넣지 않는다.
+      같은 급의 요소는 같은 서식이다 — 같은 줄의 버튼과 링크는 글자 기준선까지 맞춘다.
+*/
+
+:root {
+  /* 색 — office-deck 1절과 같은 값 */
+  --navy: #1F3A5F;        /* 주색: 제목·강조 카드 테두리·남색 원 */
+  --navy-2: #2E5480;      /* 표지 보조 남색 */
+  --sky: #CADCFC;         /* 표지 보조 연남색 */
+  --ink: #1E293B;         /* 진한 글자(제목) */
+  --text: #334155;        /* 본문 글자 */
+  --muted: #64748B;       /* 회색 글자: 분류명·바닥글·보조 설명 */
+  --card: #F1F4F8;        /* 카드 바탕 */
+  --card-strong: #E3EAF3; /* 강조 카드 바탕 */
+  --line: #CBD5E1;        /* 구분선·표 테두리 */
+  --alert: #B42318;       /* 빨강: ※ 경고(기한·숫자)에만 */
+  --paper: #FFFFFF;       /* 바탕 */
+
+  /* 글꼴 — Noto Sans KR 하나. 맑은 고딕은 「촌스럽다」고 해서 뺐다(없을 때 대체용으로만) */
+  --font: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+
+  /* 간격·모서리 — 카드 간격 0.3인치(≈ 24px)에 맞춤 */
+  --gap: 24px;
+  --radius: 10px;
+
+  color-scheme: light dark;
+}
+
+/* 어두운 모드 — 남색 바탕(표지·연락처 장과 같은 샌드위치 색) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #CADCFC;
+    --navy-2: #9FB8E6;
+    --sky: #2E5480;
+    --ink: #F1F4F8;
+    --text: #D5DCE6;
+    --muted: #94A3B8;
+    --card: #223B5B;
+    --card-strong: #2E5480;
+    --line: #3B5478;
+    --alert: #F2A49B;
+    --paper: #1F3A5F;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #CADCFC;
+  --navy-2: #9FB8E6;
+  --sky: #2E5480;
+  --ink: #F1F4F8;
+  --text: #D5DCE6;
+  --muted: #94A3B8;
+  --card: #223B5B;
+  --card-strong: #2E5480;
+  --line: #3B5478;
+  --alert: #F2A49B;
+  --paper: #1F3A5F;
+}
+
+/* 기본 — 바탕·글꼴·자간 */
+html, body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font);
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+/* 제목 — 밑줄·장식 띠 없음. 분류명(작은 회색)보다 핵심 문장(크고 굵게)이 먼저 눈에 띈다 */
+h1, h2, h3, h4 {
+  color: var(--ink);
+  letter-spacing: 0;
+  text-decoration: none;
+  border: 0;
+  margin: 0 0 .5em;
+}
+h1 { font-size: 1.6rem; font-weight: 700; }
+h2 { font-size: 1.25rem; font-weight: 700; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+.eyebrow { color: var(--muted); font-size: .85rem; }   /* 「01  행정사」 같은 분류명 */
+.footnote { color: var(--muted); font-size: .8rem; }   /* 바닥글 「서지훈행정사사무소」 */
+
+/* 카드 — 옅은 청회색, 옆 띠 없음 */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--gap);
+}
+.card.strong { background: var(--card-strong); }
+
+/* 남색 원 안의 흰 아이콘·번호 */
+.dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.2em; height: 2.2em; border-radius: 50%;
+  background: var(--navy); color: var(--paper); font-weight: 700;
+}
+
+/* 경고 — 빨강은 기한·숫자 경고에만 */
+.alert { color: var(--alert); }
+
+/* 표 — 머리행은 강조 카드 색, 선은 구분선 색 */
+table { border-collapse: collapse; width: 100%; }
+th { background: var(--card-strong); color: var(--ink); text-align: left; }
+th, td { border: 1px solid var(--line); padding: .5em .7em; }
+
+/* 같은 급은 같은 서식 — 같은 줄의 버튼·링크는 글자 기준선까지 맞춘다(전자명함 교훈, 9/26) */
+.btn, a.btn, button.btn {
+  display: inline-flex; align-items: center; gap: .4em;
+  font: inherit; line-height: 1.2;
+  color: var(--paper); background: var(--navy);
+  border: 0; border-radius: var(--radius); padding: .6em 1em;
+  text-decoration: none; cursor: pointer;
+}
+
+@font-face { font-family: "NSNeo"; font-weight: 400; src: url("fonts/neo-400.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "NSNeo"; font-weight: 700; src: url("fonts/neo-700.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "NSNeo"; font-weight: 800; src: url("fonts/neo-800.woff2") format("woff2"); font-display: swap; }
+:root { --font: "NSNeo", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+body { margin: 0; font-family: var(--font); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: anywhere; }
+a { color: inherit; }
+.hero { position: relative; color: #fff; background: #1F3A5F url("hero.jpg") right center / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(20, 38, 64, .7); }
+.hero .in { position: relative; max-width: 1040px; margin: 0 auto; padding: 80px 24px 72px; }
+.hero .eyebrow { color: rgba(255, 255, 255, .78); font-size: 15px; margin: 0 0 12px; }
+.hero h1 { font-weight: 800; font-size: 40px; line-height: 1.25; letter-spacing: -0.02em; color: #fff; margin: 0 0 16px; }
+.hero p.sub { margin: 0; color: rgba(255, 255, 255, .9); font-size: 16px; }
+main { max-width: 1040px; margin: 0 auto; padding: 16px 24px 80px; }
+.zone { display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--line); }
+.zone .head h2 { font-weight: 800; font-size: 28px; line-height: 1.3; letter-spacing: -0.02em; margin: -4px 0 8px; }
+.zone .head h2 a { text-decoration: none; color: var(--ink); }
+.zone .num { margin: 0 0 4px; font-size: 15px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tail { padding: 40px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.01em; } .tail a { color: var(--navy); text-decoration: none; }
+.zone { scroll-margin-top: 16px; }
+.flow { padding: 48px 0 24px; border-bottom: 1px solid var(--line); }
+.flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
+.flow ol::before { content: ""; position: absolute; left: 8.33%; right: 8.33%; top: 32px; border-top: 1px solid var(--line); }
+.flow a { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; text-align: center; }
+.flow .ic { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.flow a:hover .ic { border-color: var(--navy); }
+.flow svg { width: 28px; height: 28px; fill: none; stroke: var(--navy); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.flow .n { font-size: 13px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.flow .l { font-size: 16px; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
+.zone .meta { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+.zone .more { font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none; }
+.zone .more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.zone ul { list-style: none; margin: 0; padding: 0; }
+.zone li a { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 14px 0; text-decoration: none; border-top: 1px solid var(--line); }
+.zone li:first-child a { border-top: 0; padding-top: 0; }
+.zone li .t { color: var(--text); font-size: 16px; }
+.zone li a:hover .t { color: var(--navy); }
+.zone li .d { color: var(--muted); font-size: 13px; flex: none; font-variant-numeric: tabular-nums; }
+.cta { background: #1F3A5F; color: #fff; }
+.cta .in { max-width: 1040px; margin: 0 auto; padding: 40px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.cta .who { display: flex; align-items: center; gap: 16px; }
+.cta .who img { width: 56px; height: 56px; flex: none; }
+.cta .name { margin: 0 0 2px; font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, .78); }
+.cta .tel { display: block; color: #fff; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.cta .links { display: flex; gap: 10px; flex-wrap: wrap; }
+.cta .links a { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; height: 44px; padding: 0 18px; box-sizing: border-box; border: 1px solid rgba(255, 255, 255, .35); border-radius: var(--radius); }
+.cta .links a:hover { background: rgba(255, 255, 255, .08); }
+.cta .links svg { width: 16px; height: 16px; flex: none; }
+footer { max-width: 1040px; margin: 0 auto; padding: 24px 24px 40px; font-size: 13px; }
+@media (prefers-color-scheme: dark) {
+  .cta { background: rgba(0, 0, 0, .28); border-top: 1px solid var(--line); }
+  .hero::before { background: rgba(10, 20, 36, .72); }
+}
+@media (max-width: 720px) {
+  .hero .in { padding: 56px 20px 48px; } .hero h1 { font-size: 30px; } .hero p.sub { font-size: 15px; }
+  .zone .head h2 { font-size: 24px; margin: 0 0 4px; }
+  main { padding: 8px 20px 48px; }
+  .zone { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
+  .zone .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+  .zone .head h2 { width: 100%; }
+  .zone .meta { margin: 0; }
+  .zone .head .more { margin-left: auto; }
+  .zone li .t { font-size: 15px; }
+  .zone li a { padding: 12px 0; }
+  .cta .in { padding: 32px 20px; }
+  .flow { padding: 32px 0 16px; }
+  .flow ol { grid-template-columns: repeat(3, 1fr); row-gap: 24px; }
+  .flow ol::before { display: none; }
+  .flow .ic { width: 56px; height: 56px; margin-bottom: 4px; }
+  .flow .l { font-size: 15px; }
+  .tail { font-size: 17px; }
+  .cta .tel { font-size: 24px; }
+  .cta .links { width: 100%; } .cta .links a { flex: 1; justify-content: center; }
+}
+</style></head><body>
+<header class="hero"><div class="in">
+  <p class="eyebrow">서지훈행정사사무소 · 손실보상</p>
+  <h1>보상 절차 한 바퀴</h1>
+  <p class="sub">보상 통지를 받은 뒤 거치는 순서대로 글을 모았습니다.</p>
+</div></header>
+<main><nav class="flow" aria-label="보상 절차 순서"><ol><li><a href="#s1"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l7 4V6L7 10H4z"/><path d="M17.5 9a4 4 0 0 1 0 6"/></svg></span><span class="n">01</span><span class="l">사업 고시</span></a></li><li><a href="#s2"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l5 5"/></svg></span><span class="n">02</span><span class="l">조사·조서</span></a></li><li><a href="#s3"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span><span class="n">03</span><span class="l">보상계획 공고</span></a></li><li><a href="#s4"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8 8.5l1.6 7 2.4-5.5 2.4 5.5 1.6-7"/><path d="M7.5 12h9"/></svg></span><span class="n">04</span><span class="l">보상금·협의</span></a></li><li><a href="#s5"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-2.5 6a2.5 2.5 0 0 0 5 0z"/><path d="M19 7l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg></span><span class="n">05</span><span class="l">수용재결</span></a></li><li><a href="#s6"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M15 15h-5m0 0l2-2m-2 2l2 2"/></svg></span><span class="n">06</span><span class="l">이의신청</span></a></li></ol></nav><section class="zone" id="s1">
+  <div class="head">
+    <p class="num">01</p><h2>사업 고시와 기준일</h2>
+    <p class="meta">글 1편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/seo_law_law/224424448836" target="_blank" rel="noopener"><span class="t">공공주택특별법 지구지정 고시, 그날부터 보상이 묶이기 시작합니다</span><span class="d">9.28</span></a></li></ul>
+</section><section class="zone" id="s2">
+  <div class="head">
+    <p class="num">02</p><h2>조사와 조서</h2>
+    <p class="meta">글 3편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/seo_law_law/224410439837" target="_blank" rel="noopener"><span class="t">지장물 조사, 무슨 서류를 준비하고 조서 이의는 언제까지 내</span><span class="d">9.14</span></a></li><li><a href="https://blog.naver.com/seo_law_law/224419464405" target="_blank" rel="noopener"><span class="t">지장물 조사, 이렇게 대응하십시오</span><span class="d">9.22</span></a></li><li><a href="https://blog.naver.com/seo_law_law/224448810122" target="_blank" rel="noopener"><span class="t">지장물조사를 거부하면 어떻게 되나</span><span class="d">10.21</span></a></li></ul>
+</section><section class="zone" id="s3">
+  <div class="head">
+    <p class="num">03</p><h2>보상계획 공고·열람</h2>
+    <p class="meta">글 1편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/seo_law_law/224421608783" target="_blank" rel="noopener"><span class="t">공시송달로 붙은 보상계획, 14일이 지나면 받은 것이 됩니다</span><span class="d">9.24</span></a></li></ul>
+</section><section class="zone" id="s4">
+  <div class="head">
+    <p class="num">04</p><h2>보상금과 협의</h2>
+    <p class="meta">글 5편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/seo_law_law/224401729366" target="_blank" rel="noopener"><span class="t">지장물 보상금, 옮기는 값만 나옵니까? - 사가는 값으로 받는 3가지 경우</span><span class="d">9.5</span></a></li><li><a href="https://blog.naver.com/seo_law_law/224427953325" target="_blank" rel="noopener"><span class="t">지장물 보상금, 공유자가 나눠 받을 때</span><span class="d">10.1</span></a></li><li><a href="https://blog.naver.com/seo_law_law/224432679172" target="_blank" rel="noopener"><span class="t">주민대책위원회가 생기면 보상이 달라지나</span><span class="d">10.6</span></a></li><li><a href="https://blog.naver.com/seo_law_law/224446240050" target="_blank" rel="noopener"><span class="t">재개발 보상협의 공시송달</span><span class="d">10.19</span></a></li><li><a href="https://blog.naver.com/seo_law_law/224450947884" target="_blank" rel="noopener"><span class="t">폐업신고를 했어도 영업보상 대상일 수 있습니다</span><span class="d">10.23</span></a></li></ul>
+</section><section class="zone" id="s5">
+  <div class="head">
+    <p class="num">05</p><h2>수용재결</h2>
+    <p class="meta">글 1편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/seo_law_law/224441075714" target="_blank" rel="noopener"><span class="t">수용재결 의견서는 위원회가 아니라 구청·군청에 냅니다</span><span class="d">10.14</span></a></li></ul>
+</section><section class="zone" id="s6">
+  <div class="head">
+    <p class="num">06</p><h2>이의신청</h2>
+    <p class="meta">글 1편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/seo_law_law/224388276056" target="_blank" rel="noopener"><span class="t">영업보상 이의신청, 30일 놓치면 끝입니다</span><span class="d">8.24</span></a></li></ul>
+</section><p class="tail"><a href="https://blog.naver.com/PostList.naver?blogId=seo_law_law&categoryNo=6" target="_blank" rel="noopener">블로그에서 「보상절차한바퀴」 전체 글 보기 <span aria-hidden="true">&rarr;</span></a></p></main>
+<section class="cta"><div class="in">
+  <div class="who"><img src="logo.png" alt="대한행정사회">
+    <div><p class="name">행정사 서지훈</p><a class="tel" href="tel:01059535995">010-5953-5995</a></div></div>
+  <div class="links">
+    <a href="https://www.youtube.com/@서지훈행정사사무소" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="#fff"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#1F3A5F"/></svg>유튜브</a>
+    <a href="https://map.naver.com/p/entry/place/2064907654" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" fill="#fff"/><circle cx="12" cy="9" r="2.6" fill="#1F3A5F"/></svg>오시는 길</a>
+  </div>
+</div></section>
+<footer><span class="footnote">서지훈행정사사무소 · 서울 송파구</span></footer>
+</body></html>
