@@ -1,6 +1,6 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>지구별 보상 안내 · 서지훈행정사사무소</title>
-<meta name="description" content="사업지구별 손실보상 글 모음 · 서지훈행정사사무소">
+<meta name="description" content="지구별 보상 안내 · 서지훈행정사사무소 손실보상 글 모음">
 <style>
 /* 사무소_토큰 v1 — 서지훈행정사사무소 HTML 디자인 토큰 (2026-10-05 신설)
 
@@ -144,6 +144,18 @@ main { max-width: 1040px; margin: 0 auto; padding: 16px 24px 80px; }
 .zone { display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--line); }
 .zone .head h2 { font-weight: 800; font-size: 28px; line-height: 1.3; letter-spacing: -0.02em; margin: -4px 0 8px; }
 .zone .head h2 a { text-decoration: none; color: var(--ink); }
+.zone .num { margin: 0 0 4px; font-size: 15px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tail { padding: 40px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.01em; } .tail a { color: var(--navy); text-decoration: none; }
+.zone { scroll-margin-top: 16px; }
+.flow { padding: 48px 0 24px; border-bottom: 1px solid var(--line); }
+.flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
+.flow ol::before { content: ""; position: absolute; left: 8.33%; right: 8.33%; top: 32px; border-top: 1px solid var(--line); }
+.flow a { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; text-align: center; }
+.flow .ic { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.flow a:hover .ic { border-color: var(--navy); }
+.flow svg { width: 28px; height: 28px; fill: none; stroke: var(--navy); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.flow .n { font-size: 13px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.flow .l { font-size: 16px; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
 .zone .meta { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
 .zone .more { font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none; }
 .zone .more:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -180,6 +192,12 @@ footer { max-width: 1040px; margin: 0 auto; padding: 24px 24px 40px; font-size: 
   .zone li .t { font-size: 15px; }
   .zone li a { padding: 12px 0; }
   .cta .in { padding: 32px 20px; }
+  .flow { padding: 32px 0 16px; }
+  .flow ol { grid-template-columns: repeat(3, 1fr); row-gap: 24px; }
+  .flow ol::before { display: none; }
+  .flow .ic { width: 56px; height: 56px; margin-bottom: 4px; }
+  .flow .l { font-size: 15px; }
+  .tail { font-size: 17px; }
   .cta .tel { font-size: 24px; }
   .cta .links { width: 100%; } .cta .links a { flex: 1; justify-content: center; }
 }
