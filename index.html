@@ -187,6 +187,12 @@ body{
 .li-text span{font-size:.8rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .chevron{flex:none;color:var(--muted)}
 .chevron svg{width:18px;height:18px;display:block}
+/* 손실보상 아래 바로가기 두 줄 — 10/27 행정사님 「전자명함에도 두 개 넣어 놓으면」(블로그 버튼과 같은 페이지) */
+.sub-links{display:flex;flex-direction:column;gap:6px;margin:-4px 0 4px 56px}
+.sub-link{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);
+  padding:10px 14px;text-decoration:none;color:var(--fg);font-size:.88rem;font-weight:600}
+.sub-link .chevron svg{width:15px;height:15px}
 
 /* ---- 활동 갤러리 ---- */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -252,6 +258,10 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
         <span class="li-text"><strong>손실보상</strong><span>토지·건물·영업·지장물보상</span></span>
         <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
       </a>
+      <div class="sub-links">
+        <a class="sub-link" href="steps/">보상 절차 한 바퀴<span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+        <a class="sub-link" href="zones/">지구별 보상 안내<span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+      </div>
       <a class="list-item" href="https://blog.naver.com/altruism_of_seo">
         <span class="badge badge-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M8 11h2M8 15h2M14 7h2M14 11h2M14 15h2"/><path d="M10 21v-4h4v4"/></svg></span>
         <span class="li-text"><strong>기업 인허가</strong><span>신청 전 리스크 점검·인허가 전략</span></span>
