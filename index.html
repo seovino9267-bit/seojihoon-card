@@ -34,6 +34,7 @@
   --badge-a-bg:#EAF1FE; --badge-a-fg:#2F6FE0;
   --badge-b-bg:#E7F6F0; --badge-b-fg:#1F9067;
   --badge-c-bg:#FDECEC; --badge-c-fg:#D32F2F;
+  --badge-d-bg:#FDF1E2; --badge-d-fg:#B45309;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -50,6 +51,7 @@
     --badge-a-bg:#20304A; --badge-a-fg:#7FA8F2;
     --badge-b-bg:#173428; --badge-b-fg:#5BC79A;
     --badge-c-bg:#3A1D1D; --badge-c-fg:#F28B82;
+    --badge-d-bg:#3A2A14; --badge-d-fg:#F0B35A;
   }
 }
 :root[data-theme="dark"]{
@@ -66,6 +68,7 @@
   --badge-a-bg:#20304A; --badge-a-fg:#7FA8F2;
   --badge-b-bg:#173428; --badge-b-fg:#5BC79A;
   --badge-c-bg:#3A1D1D; --badge-c-fg:#F28B82;
+  --badge-d-bg:#3A2A14; --badge-d-fg:#F0B35A;
 }
 
 *{box-sizing:border-box}
@@ -182,6 +185,7 @@ body{
 .badge-a{background:var(--badge-a-bg);color:var(--badge-a-fg)}
 .badge-b{background:var(--badge-b-bg);color:var(--badge-b-fg)}
 .badge-c{background:var(--badge-c-bg);color:var(--badge-c-fg)}
+.badge-d{background:var(--badge-d-bg);color:var(--badge-d-fg)}
 .li-text{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}
 .li-text strong{font-size:.98rem;font-weight:700}
 .li-text span{font-size:.8rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -272,6 +276,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
           <a class="sub-link" href="https://blog.naver.com/seo_law_law">손실보상 블로그<span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
         </div>
       </details>
+      <!-- 11/13 행정사님 「전단지 돌리면 전자명함 QR 찍는데 양성화 메뉴가 없으면 안 될 것 같아」 → 손실보상 아래 숨기지 않고 한 줄로 -->
+      <a class="list-item" href="yangsung/">
+        <span class="badge badge-d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 15l2 2 3.5-4"/></svg></span>
+        <span class="li-text"><strong>위반건축물 양성화</strong><span>대상 여부·비용·신청까지</span></span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+      </a>
       <a class="list-item" href="https://blog.naver.com/altruism_of_seo">
         <span class="badge badge-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M8 11h2M8 15h2M14 7h2M14 11h2M14 15h2"/><path d="M10 21v-4h4v4"/></svg></span>
         <span class="li-text"><strong>기업 인허가</strong><span>신청 전 리스크 점검·인허가 전략</span></span>
