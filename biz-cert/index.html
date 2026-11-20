@@ -1,0 +1,258 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>인증·지원 분야별 안내 · 서지훈행정사사무소</title>
+<meta name="description" content="벤처·이노비즈부터 조달 가점, 부담금 면제, 공장등록까지 분야별로 글을 모았습니다.">
+<meta property="og:type" content="website"><meta property="og:title" content="인증·지원 분야별 안내 · 서지훈행정사사무소">
+<meta property="og:description" content="벤처·이노비즈부터 조달 가점, 부담금 면제, 공장등록까지 분야별로 글을 모았습니다."><meta property="og:url" content="https://seovino9267-bit.github.io/seojihoon-card/biz-cert/">
+<meta property="og:image" content="https://seovino9267-bit.github.io/seojihoon-card/biz-cert/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<style>
+/* 사무소_토큰 v1 — 서지훈행정사사무소 HTML 디자인 토큰 (2026-10-05 신설)
+
+   출처: .claude/skills/office-deck/SKILL.md 1절 「기준 4칸」(남색 카드 소개서, 2026-09-24 확정).
+   PPT가 이미 쓰는 색·글꼴을 HTML·아티팩트·현황판·전자명함이 그대로 쓰게 하는 한 장이다.
+   AI가 색과 글꼴을 매번 새로 정하지 않게 하는 것이 목적이다 — 「AI가 결정할 선택지를 줄인다」.
+
+   쓰는 법
+   1) 창고 안 HTML:   <link rel="stylesheet" href="../tools/design/사무소_토큰.css">
+   2) 아티팩트·단일 파일: 아래 :root 블록(어두운 모드 포함)을 <style> 맨 앞에 그대로 복사한다.
+      첫 줄 주석 「사무소_토큰 v1」을 남긴다 — tools/ai_ti_check.py 가 그 표시로 토큰 사용 여부를 안다.
+   3) 색은 변수만 쓴다. 새 색이 필요하면 이 파일에 먼저 더하고 쓴다(파일마다 다른 색 금지).
+   4) 흑백 공문형 전단·우편물은 자기 기준본(송파 흑백 공문)이 따로 있다 — 이 파일을 쓰지 않는다.
+   5) 글자 사이를 벌리지 않는다(letter-spacing 0). 제목 밑줄·장식 띠·카드 옆 띠를 넣지 않는다.
+      같은 급의 요소는 같은 서식이다 — 같은 줄의 버튼과 링크는 글자 기준선까지 맞춘다.
+*/
+
+:root {
+  /* 색 — office-deck 1절과 같은 값 */
+  --navy: #1F3A5F;        /* 주색: 제목·강조 카드 테두리·남색 원 */
+  --navy-2: #2E5480;      /* 표지 보조 남색 */
+  --sky: #CADCFC;         /* 표지 보조 연남색 */
+  --ink: #1E293B;         /* 진한 글자(제목) */
+  --text: #334155;        /* 본문 글자 */
+  --muted: #64748B;       /* 회색 글자: 분류명·바닥글·보조 설명 */
+  --card: #F1F4F8;        /* 카드 바탕 */
+  --card-strong: #E3EAF3; /* 강조 카드 바탕 */
+  --line: #CBD5E1;        /* 구분선·표 테두리 */
+  --alert: #B42318;       /* 빨강: ※ 경고(기한·숫자)에만 */
+  --paper: #FFFFFF;       /* 바탕 */
+
+  /* 글꼴 — Noto Sans KR 하나. 맑은 고딕은 「촌스럽다」고 해서 뺐다(없을 때 대체용으로만) */
+  --font: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+
+  /* 간격·모서리 — 카드 간격 0.3인치(≈ 24px)에 맞춤 */
+  --gap: 24px;
+  --radius: 10px;
+
+  color-scheme: light dark;
+}
+
+/* 어두운 모드 — 남색 바탕(표지·연락처 장과 같은 샌드위치 색) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #CADCFC;
+    --navy-2: #9FB8E6;
+    --sky: #2E5480;
+    --ink: #F1F4F8;
+    --text: #D5DCE6;
+    --muted: #94A3B8;
+    --card: #223B5B;
+    --card-strong: #2E5480;
+    --line: #3B5478;
+    --alert: #F2A49B;
+    --paper: #1F3A5F;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #CADCFC;
+  --navy-2: #9FB8E6;
+  --sky: #2E5480;
+  --ink: #F1F4F8;
+  --text: #D5DCE6;
+  --muted: #94A3B8;
+  --card: #223B5B;
+  --card-strong: #2E5480;
+  --line: #3B5478;
+  --alert: #F2A49B;
+  --paper: #1F3A5F;
+}
+
+/* 기본 — 바탕·글꼴·자간 */
+html, body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font);
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+/* 제목 — 밑줄·장식 띠 없음. 분류명(작은 회색)보다 핵심 문장(크고 굵게)이 먼저 눈에 띈다 */
+h1, h2, h3, h4 {
+  color: var(--ink);
+  letter-spacing: 0;
+  text-decoration: none;
+  border: 0;
+  margin: 0 0 .5em;
+}
+h1 { font-size: 1.6rem; font-weight: 700; }
+h2 { font-size: 1.25rem; font-weight: 700; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+.eyebrow { color: var(--muted); font-size: .85rem; }   /* 「01  행정사」 같은 분류명 */
+.footnote { color: var(--muted); font-size: .8rem; }   /* 바닥글 「서지훈행정사사무소」 */
+
+/* 카드 — 옅은 청회색, 옆 띠 없음 */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--gap);
+}
+.card.strong { background: var(--card-strong); }
+
+/* 남색 원 안의 흰 아이콘·번호 */
+.dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.2em; height: 2.2em; border-radius: 50%;
+  background: var(--navy); color: var(--paper); font-weight: 700;
+}
+
+/* 경고 — 빨강은 기한·숫자 경고에만 */
+.alert { color: var(--alert); }
+
+/* 표 — 머리행은 강조 카드 색, 선은 구분선 색 */
+table { border-collapse: collapse; width: 100%; }
+th { background: var(--card-strong); color: var(--ink); text-align: left; }
+th, td { border: 1px solid var(--line); padding: .5em .7em; }
+
+/* 같은 급은 같은 서식 — 같은 줄의 버튼·링크는 글자 기준선까지 맞춘다(전자명함 교훈, 9/26) */
+.btn, a.btn, button.btn {
+  display: inline-flex; align-items: center; gap: .4em;
+  font: inherit; line-height: 1.2;
+  color: var(--paper); background: var(--navy);
+  border: 0; border-radius: var(--radius); padding: .6em 1em;
+  text-decoration: none; cursor: pointer;
+}
+
+@font-face { font-family: "NSNeo"; font-weight: 400; src: url("fonts/neo-400.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "NSNeo"; font-weight: 700; src: url("fonts/neo-700.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "NSNeo"; font-weight: 800; src: url("fonts/neo-800.woff2") format("woff2"); font-display: swap; }
+:root { --font: "NSNeo", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+body { margin: 0; font-family: var(--font); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: anywhere; }
+a { color: inherit; }
+.hero { position: relative; color: #fff; background: #1F3A5F url("hero.jpg") right center / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(20, 38, 64, .7); }
+.hero .in { position: relative; max-width: 1040px; margin: 0 auto; padding: 80px 24px 72px; }
+.hero .eyebrow { color: rgba(255, 255, 255, .78); font-size: 15px; margin: 0 0 12px; }
+.hero h1 { font-weight: 800; font-size: 40px; line-height: 1.25; letter-spacing: -0.02em; color: #fff; margin: 0 0 16px; }
+.hero p.sub { margin: 0; color: rgba(255, 255, 255, .9); font-size: 16px; }
+main { max-width: 1040px; margin: 0 auto; padding: 16px 24px 80px; }
+.zone { display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--line); }
+.zone .head h2 { font-weight: 800; font-size: 28px; line-height: 1.3; letter-spacing: -0.02em; margin: -4px 0 8px; }
+.zone .head h2 a { text-decoration: none; color: var(--ink); }
+.zone .num { margin: 0 0 4px; font-size: 15px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tail { padding: 40px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.01em; } .tail a { color: var(--navy); text-decoration: none; }
+.zone { scroll-margin-top: 16px; }
+.flow { padding: 48px 0 24px; border-bottom: 1px solid var(--line); }
+.flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
+.flow ol::before { content: ""; position: absolute; left: 8.33%; right: 8.33%; top: 32px; border-top: 1px solid var(--line); }
+.flow a { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; text-align: center; }
+.flow .ic { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.flow a:hover .ic { border-color: var(--navy); }
+.flow svg { width: 28px; height: 28px; fill: none; stroke: var(--navy); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.flow .n { font-size: 13px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.flow .l { font-size: 16px; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
+.zone .meta { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+.zone .more { font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none; }
+.zone .more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.zone ul { list-style: none; margin: 0; padding: 0; }
+.zone li a { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 14px 0; text-decoration: none; border-top: 1px solid var(--line); }
+.zone li:first-child a { border-top: 0; padding-top: 0; }
+.zone li .t { color: var(--text); font-size: 16px; }
+.zone li a:hover .t { color: var(--navy); }
+.zone li .d { color: var(--muted); font-size: 13px; flex: none; font-variant-numeric: tabular-nums; }
+.cta { background: #1F3A5F; color: #fff; }
+.cta .in { max-width: 1040px; margin: 0 auto; padding: 40px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.cta .who { display: flex; align-items: center; gap: 16px; }
+.cta .who img { width: 56px; height: 56px; flex: none; }
+.cta .name { margin: 0 0 2px; font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, .78); }
+.cta .tel { display: block; color: #fff; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.cta .links { display: flex; gap: 10px; flex-wrap: wrap; }
+.cta .links a { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; height: 44px; padding: 0 18px; box-sizing: border-box; border: 1px solid rgba(255, 255, 255, .35); border-radius: var(--radius); }
+.cta .links a:hover { background: rgba(255, 255, 255, .08); }
+.cta .links svg { width: 16px; height: 16px; flex: none; }
+footer { max-width: 1040px; margin: 0 auto; padding: 24px 24px 40px; font-size: 13px; }
+@media (prefers-color-scheme: dark) {
+  .cta { background: rgba(0, 0, 0, .28); border-top: 1px solid var(--line); }
+  .hero::before { background: rgba(10, 20, 36, .72); }
+}
+@media (max-width: 720px) {
+  .hero .in { padding: 56px 20px 48px; } .hero h1 { font-size: 30px; } .hero p.sub { font-size: 15px; }
+  .zone .head h2 { font-size: 24px; margin: 0 0 4px; }
+  main { padding: 8px 20px 48px; }
+  .zone { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
+  .zone .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+  .zone .head h2 { width: 100%; }
+  .zone .meta { margin: 0; }
+  .zone .head .more { margin-left: auto; }
+  .zone li .t { font-size: 15px; }
+  .zone li a { padding: 12px 0; }
+  .cta .in { padding: 32px 20px; }
+  .flow { padding: 32px 0 16px; }
+  .flow ol { grid-template-columns: repeat(3, 1fr); row-gap: 24px; }
+  .flow ol::before { display: none; }
+  .flow .ic { width: 56px; height: 56px; margin-bottom: 4px; }
+  .flow .l { font-size: 15px; }
+  .tail { font-size: 17px; }
+  .cta .tel { font-size: 24px; }
+  .cta .links { width: 100%; } .cta .links a { flex: 1; justify-content: center; }
+}
+</style></head><body>
+<header class="hero"><div class="in">
+  <p class="eyebrow">서지훈행정사사무소 · 기업행정</p>
+  <h1>인증·지원 분야별 안내</h1>
+  <p class="sub">벤처·이노비즈부터 조달 가점, 부담금 면제, 공장등록까지 분야별로 글을 모았습니다.</p>
+</div></header>
+<main><section class="zone" id="s1">
+  <div class="head">
+    <p class="num">01</p><h2>벤처·이노비즈·메인비즈</h2>
+    <p class="meta">글 6편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/altruism_of_seo/224386483766" target="_blank" rel="noopener"><span class="t">메인비즈·이노비즈·벤처기업, 이 순서로 받으면 됩니다</span><span class="d">8.22</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224392952981" target="_blank" rel="noopener"><span class="t">기업부설연구소, 이노비즈·벤처기업 받기 전에 먼저 갖춰야 하는 것</span><span class="d">8.28</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224414512351" target="_blank" rel="noopener"><span class="t">벤처기업인증 요건, 창업 3년 안 된 회사는 매출 비율을 보지 않습니다</span><span class="d">9.17</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224427998800" target="_blank" rel="noopener"><span class="t">벤처기업확인 연장에서 떨어졌다면, 이의신청은 「기술이 좋다」가 아니라 「그때보다 나아졌다」를 보여야 합니다</span><span class="d">10.1</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224443362913" target="_blank" rel="noopener"><span class="t">이노비즈 인증, 기업부설연구소는 필수가 아닙니다</span><span class="d">10.16</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224449151498" target="_blank" rel="noopener"><span class="t">벤처기업인증·이노비즈·메인비즈, 여러 개 받을 계획이라면 공통 가점부터</span><span class="d">10.22</span></a></li></ul>
+</section><section class="zone" id="s2">
+  <div class="head">
+    <p class="num">02</p><h2>여성·창업·뿌리기업 확인과 가족친화인증</h2>
+    <p class="meta">글 4편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/altruism_of_seo/224382640424" target="_blank" rel="noopener"><span class="t">여성기업확인서, 신청 전에 꼭 알아야 할 3가지</span><span class="d">8.19</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224384798096" target="_blank" rel="noopener"><span class="t">창업기업확인서, &quot;3년 지나면 끝&quot; 아닙니다</span><span class="d">8.21</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224421665841" target="_blank" rel="noopener"><span class="t">가족친화인증, 규정만 만들면 떨어집니다</span><span class="d">9.24</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224432726219" target="_blank" rel="noopener"><span class="t">제조업이라면 벤처보다 뿌리기업 확인서가 먼저일 수 있습니다</span><span class="d">10.6</span></a></li></ul>
+</section><section class="zone" id="s3">
+  <div class="head">
+    <p class="num">03</p><h2>조달청 가점과 공공조달</h2>
+    <p class="meta">글 10편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/altruism_of_seo/224381107749" target="_blank" rel="noopener"><span class="t">일·생활균형 캠페인 참여, 조달청 신인도 가점부터 확인하세요.</span><span class="d">8.17</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224388919771" target="_blank" rel="noopener"><span class="t">관공서 납품, 창업기업은 8%가 법으로 정해져 있습니다.</span><span class="d">8.25</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224403873526" target="_blank" rel="noopener"><span class="t">조달청 신인도 가점, 인증 여러 개 있어도 한 개만 계산됩니다</span><span class="d">9.8</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224419500705" target="_blank" rel="noopener"><span class="t">조달청 신인도 일자리창출 우수기업, 작은 회사는 직원 한 명이 3점을 가릅니다</span><span class="d">9.22</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224426211026" target="_blank" rel="noopener"><span class="t">조달청 적격심사 신인도, 장애인기업 1.5점 · 표창 1.0점 · 정규직전환 1.5점</span><span class="d">9.30</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224442378421" target="_blank" rel="noopener"><span class="t">조달청 우수제품 가산점, 신인도 가점과는 다른 제도입니다</span><span class="d">10.15</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224457504487" target="_blank" rel="noopener"><span class="t">여성기업 수의계약 한도, 1억원은 소기업과 같습니다</span><span class="d">10.29</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224463174889" target="_blank" rel="noopener"><span class="t">공공조달관리사 가점 3점, 입찰 점수에 바로 더해지지 않습니다</span><span class="d">11.3</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224471357788" target="_blank" rel="noopener"><span class="t">직접생산확인증명서 유효기간 2년, 만료 30일 안에 다시 신청해야 새 2년이 이어집니다</span><span class="d">11.10</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224480068331" target="_blank" rel="noopener"><span class="t">다수공급자계약(MAS) 납품실적, 창업 3년 이내 제조기업은 없어도 가격협상 대상이 될 수 있습니다</span><span class="d">11.17</span></a></li></ul>
+</section><section class="zone" id="s4">
+  <div class="head">
+    <p class="num">04</p><h2>부담금 면제와 세금 감면</h2>
+    <p class="meta">글 6편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/altruism_of_seo/224384152596" target="_blank" rel="noopener"><span class="t">제조업 사장님, 전력산업기반기금 5년 지나면 환급 못 받습니다</span><span class="d">8.20</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224390490239" target="_blank" rel="noopener"><span class="t">전력기금 환급, 신청 전에 이 3가지부터 확인하세요</span><span class="d">8.26</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224397027015" target="_blank" rel="noopener"><span class="t">전력산업기반기금 면제, 환급과 다릅니다 - 제조업 창업 7년이면 안 내도 됩니다</span><span class="d">9.1</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224400696953" target="_blank" rel="noopener"><span class="t">제조업 창업 7년, 안 내도 되는 부담금 16가지</span><span class="d">9.4</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224418427088" target="_blank" rel="noopener"><span class="t">설비를 인수해 시작하면, 세액감면에서는 창업이 아닙니다</span><span class="d">9.21</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224420572266" target="_blank" rel="noopener"><span class="t">지방에서 창업하면 5년 100% 감면? 절반만 맞습니다</span><span class="d">9.23</span></a></li></ul>
+</section><section class="zone" id="s5">
+  <div class="head">
+    <p class="num">05</p><h2>공장등록·해썹·인허가</h2>
+    <p class="meta">글 4편</p>
+    
+  </div>
+  <ul><li><a href="https://blog.naver.com/altruism_of_seo/224410565805" target="_blank" rel="noopener"><span class="t">제조업 사장님, &quot;공장등록 안 하면 징역&quot;은 사실이 아닙니다</span><span class="d">9.15</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224412963319" target="_blank" rel="noopener"><span class="t">벌크 받아 용기에 담기만 해도, 화장품제조업 등록 대상입니다</span><span class="d">9.16</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224447365487" target="_blank" rel="noopener"><span class="t">해썹(HACCP) 연장심사·조사평가·인증취소 뒤</span><span class="d">10.20</span></a></li><li><a href="https://blog.naver.com/altruism_of_seo/224455012678" target="_blank" rel="noopener"><span class="t">공장등록 전 소음·진동 배출시설 신고, 7.5kW만 보면 틀립니다</span><span class="d">10.27</span></a></li></ul>
+</section><p class="tail"><a href="https://blog.naver.com/PostList.naver?blogId=altruism_of_seo&categoryNo=11" target="_blank" rel="noopener">블로그에서 「인증 종류별 가이드」 전체 글 보기 <span aria-hidden="true">&rarr;</span></a></p><p class="tail"><a href="https://blog.naver.com/PostList.naver?blogId=altruism_of_seo&categoryNo=18" target="_blank" rel="noopener">블로그에서 「공장등록·해썹」 전체 글 보기 <span aria-hidden="true">&rarr;</span></a></p></main>
+<section class="cta"><div class="in">
+  <div class="who"><img src="logo.png" alt="대한행정사회">
+    <div><p class="name">행정사 서지훈</p><a class="tel" href="tel:01059535995">010-5953-5995</a></div></div>
+  <div class="links">
+    <a href="https://www.youtube.com/@서지훈행정사사무소" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="#fff"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#1F3A5F"/></svg>유튜브</a>
+    <a href="https://map.naver.com/p/entry/place/2064907654" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" fill="#fff"/><circle cx="12" cy="9" r="2.6" fill="#1F3A5F"/></svg>오시는 길</a>
+  </div>
+</div></section>
+<footer><span class="footnote">서지훈행정사사무소 · 서울 송파구</span></footer>
+</body></html>
