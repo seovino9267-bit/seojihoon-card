@@ -38,7 +38,7 @@
   --gap: 24px;
   --radius: 10px;
 
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 /* 어두운 모드 — 남색 바탕(표지·연락처 장과 같은 샌드위치 색) */
