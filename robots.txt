@@ -1,0 +1,10 @@
+# 서지훈행정사사무소 — seojihoon.kr
+# 네이버 검색로봇(Yeti)은 사이트를 수집하지 않는다 — 네이버 블로그와 유사문서로 묶이지 않게(2026-11-24)
+User-agent: Yeti
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /map/
+
+Sitemap: https://seojihoon.kr/sitemap.xml
