@@ -325,7 +325,7 @@ br.mo { display: none; }
 
 /* ── 소개: 왼쪽 사진·이름 / 오른쪽 글(11/24) ── */
 .profile .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; max-width: 1080px; }
-.who2 { position: sticky; top: 96px; }
+.who2 { position: static; }
 .who2 img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; display: block; background: var(--card); }
 .who2 strong { display: block; margin-top: 14px; font-size: 1.2rem; color: var(--ink); letter-spacing: -0.02em; }
 .who2 span { display: block; margin-top: 2px; color: var(--muted); font-size: .92rem; }
