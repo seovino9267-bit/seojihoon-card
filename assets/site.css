@@ -164,8 +164,8 @@ td.n { white-space: nowrap; }
 .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; display: block; }
 .gallery figcaption { font-size: .88rem; color: var(--muted); margin-top: 8px; }
 .gallery .yt a.play { position: relative; display: block; }
-.gallery .yt .btnplay { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: color-mix(in srgb, var(--band) 88%, transparent); color: var(--on-band); display: flex; align-items: center; justify-content: center; }
-.gallery .yt .btnplay svg { width: 26px; height: 26px; margin-left: 3px; }
+.gallery .yt .btnplay { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: color-mix(in srgb, var(--band) 88%, transparent); color: var(--on-band); display: flex; align-items: center; justify-content: center; }
+.gallery .yt .btnplay svg { width: 18px; height: 18px; margin-left: 2px; }
 .gallery .yt iframe { width: 100%; aspect-ratio: 4/3; border: 0; border-radius: 6px; display: block; background: #000; }
 
 /* ── 그림(SVG) ── */

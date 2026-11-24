@@ -63,21 +63,10 @@
 <h2 class="sec">활동</h2>
 
 <div class="gallery">
-  <figure class="yt"><a class="play" href="https://www.youtube.com/watch?v=fee6yzeJK8c&amp;t=115s" target="_blank" rel="noopener" data-yt="fee6yzeJK8c" data-start="115" data-end="131"><img src="/img/interview.jpg" alt="한국경제TV 인터뷰 장면 — 누르면 인터뷰 대목부터 재생"><span class="btnplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></a><figcaption>한국경제TV 인터뷰 · 누르면 재생</figcaption></figure>
+  <figure class="yt"><a class="play" href="https://www.youtube.com/watch?v=fee6yzeJK8c&amp;t=115s" target="_blank" rel="noopener"><img src="/img/interview.jpg" alt="한국경제TV 인터뷰 장면 — 누르면 유튜브에서 인터뷰 대목부터 재생"><span class="btnplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></a><figcaption>한국경제TV 인터뷰 · 누르면 유튜브에서 재생</figcaption></figure>
   <figure><img src="/img/crowd.jpg" alt="모아타운 주민설명회 현장"><figcaption>모아타운 주민설명회</figcaption></figure>
   <figure><img src="/img/podium.jpg" alt="주민설명회 강연 장면"><figcaption>설명회 강연</figcaption></figure>
 </div>
-<script>
-document.querySelectorAll('a.play[data-yt]').forEach(function (a) {
-  a.addEventListener('click', function (e) {
-    e.preventDefault();
-    var f = document.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.yt + '?autoplay=1&start=' + a.dataset.start + '&end=' + a.dataset.end + '&rel=0&playsinline=1';
-    f.title = '한국경제TV 인터뷰'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
-    a.replaceWith(f);
-  });
-});
-</script>
 </main>
 <footer><div class="wrap">
 <p><span class="fn">서지훈행정사사무소</span> · 행정사 서지훈 · <a href="tel:010-5953-5995">010-5953-5995</a> · <a href="mailto:seo_lawlaw@naver.com">seo_lawlaw@naver.com</a> · <a href="https://naver.me/FUiKdPhM" target="_blank" rel="noopener">오시는 길</a></p>
