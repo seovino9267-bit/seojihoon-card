@@ -27,6 +27,9 @@
   --line: #CBD5E1;        /* 구분선·표 테두리 */
   --alert: #B42318;       /* 빨강: ※ 경고(기한·숫자)에만 */
   --paper: #FFFFFF;       /* 바탕 */
+  --ivory: #FAF8F3;       /* 사이트 바탕(11/24 seojihoon.kr 챗GPT 시안) — 카드는 --paper */
+  --band: #1F3A5F;        /* 사이트 남색 띠(첫 화면·문의 상자) — 어두운 모드에서도 짙은 남색 */
+  --on-band: #FFFFFF;     /* 남색 띠 위 글자 */
 
   /* 글꼴 — Noto Sans KR 하나. 맑은 고딕은 「촌스럽다」고 해서 뺐다(없을 때 대체용으로만) */
   --font: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
@@ -52,6 +55,8 @@
     --line: #3B5478;
     --alert: #F2A49B;
     --paper: #1F3A5F;
+    --ivory: #1A3354;
+    --band: #12243C;
   }
 }
 :root[data-theme="dark"] {
@@ -66,6 +71,8 @@
   --line: #3B5478;
   --alert: #F2A49B;
   --paper: #1F3A5F;
+  --ivory: #1A3354;
+  --band: #12243C;
 }
 
 /* 기본 — 바탕·글꼴·자간 */
