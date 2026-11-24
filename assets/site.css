@@ -336,3 +336,8 @@ br.mo { display: none; }
   .who2 img { width: 72px; height: 72px; aspect-ratio: 1; border-radius: 50%; object-position: 50% 18%; flex: none; }
   .who2 strong { margin-top: 0; font-size: 1.1rem; }
 }
+
+/* 첫 화면 인사 줄 동그라미 프로필(11/24) */
+.hero.home .hello { display: flex; align-items: center; gap: 12px; }
+.hero.home .hello img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--paper); box-shadow: 0 1px 4px color-mix(in srgb, var(--ink) 18%, transparent); background: var(--card); }
+@media (max-width: 860px) { .hero.home .hello img { width: 42px; height: 42px; } }
