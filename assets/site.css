@@ -375,3 +375,49 @@ br.mo { display: none; }
   .hero .sig strong { font-size: 1.1rem; }
   .hero .sig span { font-size: .92rem; margin-top: 3px; }
 }
+
+/* ── 머리줄 v2(11/24): 로고 두 줄 · 메뉴 아이콘 · 전화 두 줄 ── */
+.top .wrap { height: 80px; max-width: 1200px; }
+.top .name { gap: 12px; }
+.top .name img { width: 40px; height: 39px; }
+.top .name b { display: block; font-size: 1.18rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; line-height: 1.2; }
+.top .name small { display: block; font-size: .78rem; font-weight: 500; color: var(--muted); margin-top: 1px; }
+.top nav { gap: 6px; }
+.top nav a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 10px; border-radius: 10px; font-weight: 600; font-size: 1rem; color: var(--ink); }
+.top nav a img { width: 26px; height: 26px; display: block; }
+.top nav a:hover { background: var(--card); color: var(--navy); }
+.top nav a.on { background: var(--card); color: var(--navy); box-shadow: none; }
+.top .call { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; white-space: nowrap; }
+.top .call .ic { width: 42px; height: 42px; border-radius: 50%; background: var(--band); color: var(--on-band); display: flex; align-items: center; justify-content: center; flex: none; }
+.top .call .ic svg { width: 19px; height: 19px; }
+.top .call small { display: block; font-size: .76rem; color: var(--muted); font-weight: 500; }
+.top .call b { display: block; font-size: 1.08rem; color: var(--navy); font-weight: 800; letter-spacing: -0.01em; }
+.top .call:hover b { text-decoration: underline; }
+@media (max-width: 1080px) { .top nav a { padding: 8px 10px 8px 8px; } .top .call small { display: none; } }
+@media (max-width: 860px) {
+  .top .call { display: none; }
+  .top .wrap { height: 62px; }
+  .top .name img { width: 34px; height: 33px; }
+  .top .name b { font-size: 1.1rem; }
+  .top .name small { display: none; }
+  .hero .sig img { width: 84px; height: 84px; }
+  .hero .sig strong { font-size: 1.22rem; }
+  .hero .sig span { font-size: 1rem; }
+  .hero .sig { gap: 16px; }
+}
+
+/* PC 소개 구역 사진 뺌(11/24 「pc버전에 주민의 자리에서 배운일에 사진은 지워도」) — 첫 화면 사진 카드가 대신함 */
+@media (min-width: 861px) { .profile .who2 { display: none; } .profile .wrap { display: block; max-width: 880px; } }
+
+/* 머리줄 간격(11/24 「상단메뉴 간격이 너무 ai스러워」): 균등 배분 대신 로고 왼쪽 · 메뉴+전화는 오른쪽에 한 덩어리 */
+.top .wrap { justify-content: flex-start; gap: 0; }
+.top nav { margin-left: auto; gap: 0; }
+.top nav a { padding: 6px 0; margin-left: 30px; border-radius: 0; gap: 7px; background: none !important; }
+.top nav a img { width: 22px; height: 22px; }
+.top nav a.on { box-shadow: inset 0 -2px 0 var(--navy); }
+.top nav a:hover { color: var(--navy); }
+.top .call { margin-left: 36px; padding-left: 28px; border-left: 1px solid var(--line); height: 40px; }
+@media (max-width: 1080px) { .top nav a { margin-left: 20px; } .top .call { margin-left: 24px; padding-left: 20px; } }
+@media (max-width: 860px) { .top .menu { margin-left: auto; } }
+
+.hero .sig strong { line-height: 1.35; }
