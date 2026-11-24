@@ -38,42 +38,12 @@
   --gap: 24px;
   --radius: 10px;
 
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 /* 어두운 모드 — 남색 바탕(표지·연락처 장과 같은 샌드위치 색) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --navy: #CADCFC;
-    --navy-2: #9FB8E6;
-    --sky: #2E5480;
-    --ink: #F1F4F8;
-    --text: #D5DCE6;
-    --muted: #94A3B8;
-    --card: #223B5B;
-    --card-strong: #2E5480;
-    --line: #3B5478;
-    --alert: #F2A49B;
-    --paper: #1F3A5F;
-    --ivory: #1A3354;
-    --band: #12243C;
-  }
-}
-:root[data-theme="dark"] {
-  --navy: #CADCFC;
-  --navy-2: #9FB8E6;
-  --sky: #2E5480;
-  --ink: #F1F4F8;
-  --text: #D5DCE6;
-  --muted: #94A3B8;
-  --card: #223B5B;
-  --card-strong: #2E5480;
-  --line: #3B5478;
-  --alert: #F2A49B;
-  --paper: #1F3A5F;
-  --ivory: #1A3354;
-  --band: #12243C;
-}
+
+
 
 /* 기본 — 바탕·글꼴·자간 */
 html, body {
