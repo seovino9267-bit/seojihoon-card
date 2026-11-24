@@ -258,11 +258,11 @@ footer .fn { color: var(--ink); font-weight: 700; font-size: 1.05rem; }
 .steps a .clay { width: 38px; height: 38px; }
 .card2 .clay { width: 40px; height: 40px; }
 @media (max-width: 860px) {
-  .area .bd .clay { width: 64px; height: 64px; }
-  .rows a .clay { width: 36px; height: 36px; }
+  .area .bd .clay { width: 44px; height: 44px; margin: 0; }
+  .rows a .clay { width: 28px; height: 28px; }
   .steps a .clay { display: none; }
   .card2 { flex-direction: column; gap: 8px; }
-  .card2 .clay { width: 30px; height: 30px; }
+  .card2 .clay { width: 24px; height: 24px; }
   .profile .wrap { grid-template-columns: 1fr; gap: 20px; }
   .profile img { width: 72px; height: 72px; }
   .profile dl { grid-template-columns: 1fr; gap: 2px; }
@@ -270,7 +270,7 @@ footer .fn { color: var(--ink); font-weight: 700; font-size: 1.05rem; }
 }
 
 .links3 { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 860px) { .links3 { grid-template-columns: 1fr; } .links3 .card2 { flex-direction: row; align-items: center; } .top .name img { width: 28px; height: 27px; } }
+@media (max-width: 860px) { .area-line .clay { width: 30px; height: 30px; } .links3 { grid-template-columns: 1fr; } .links3 .card2 { flex-direction: row; align-items: center; } .top .name img { width: 28px; height: 27px; } }
 
 .wrap.narrow .cards { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 860px) { .wrap.narrow .cards { grid-template-columns: 1fr 1fr; } }
