@@ -368,3 +368,10 @@ br.mo { display: none; }
 
 .hero .sig.mo-only { display: none; }
 @media (max-width: 860px) { .hero .sig.mo-only { display: flex; } }
+
+@media (max-width: 860px) {
+  .hero .sig { gap: 14px; margin-bottom: 28px; }
+  .hero .sig img { width: 68px; height: 68px; }
+  .hero .sig strong { font-size: 1.1rem; }
+  .hero .sig span { font-size: .92rem; margin-top: 3px; }
+}
