@@ -322,3 +322,17 @@ br.mo { display: none; }
 .profile .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: 6px; object-fit: cover; display: block; }
 .profile .gallery { gap: 12px; }
 @media (max-width: 860px) { .profile .gallery { gap: 8px; } .profile .gallery figcaption { font-size: .78rem; } }
+
+/* ── 소개: 왼쪽 사진·이름 / 오른쪽 글(11/24) ── */
+.profile .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; max-width: 1080px; }
+.who2 { position: sticky; top: 96px; }
+.who2 img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; display: block; background: var(--card); }
+.who2 strong { display: block; margin-top: 14px; font-size: 1.2rem; color: var(--ink); letter-spacing: -0.02em; }
+.who2 span { display: block; margin-top: 2px; color: var(--muted); font-size: .92rem; }
+.profile .note2 { color: var(--muted); margin: 0 0 14px; }
+@media (max-width: 860px) {
+  .profile .wrap { grid-template-columns: 1fr; gap: 22px; }
+  .who2 { position: static; display: flex; align-items: center; gap: 14px; }
+  .who2 img { width: 72px; height: 72px; aspect-ratio: 1; border-radius: 50%; object-position: 50% 18%; flex: none; }
+  .who2 strong { margin-top: 0; font-size: 1.1rem; }
+}
