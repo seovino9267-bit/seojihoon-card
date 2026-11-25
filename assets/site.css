@@ -544,3 +544,4 @@ br.mo { display: none; }
 .s-crowd figure { margin: 0; }
 .s-crowd img { aspect-ratio: 3 / 2; }
 @media (max-width: 860px) { .s-crowd { gap: 8px; } .s-crowd figcaption { font-size: .78rem; } }
+.s-crowd .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } .s-crowd { display: block; } @media (max-width: 860px) { .s-crowd .two { gap: 8px; } }
