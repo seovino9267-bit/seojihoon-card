@@ -539,3 +539,8 @@ br.mo { display: none; }
 .s-press em { font-style: normal; font-weight: 700; color: var(--navy); font-size: .88rem; }
 @media (max-width: 860px) { .s-press { grid-template-columns: 1fr; gap: 10px; margin: -8px 0 36px; } .s-press a { padding: 15px 16px; } .s-press strong { font-size: .98rem; } }
 .s-press { margin-top: 0; } .s-proof { margin-bottom: 20px; }
+/* 설명회 사진 두 장 나란히 */
+.s-crowd { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: none; }
+.s-crowd figure { margin: 0; }
+.s-crowd img { aspect-ratio: 3 / 2; }
+@media (max-width: 860px) { .s-crowd { gap: 8px; } .s-crowd figcaption { font-size: .78rem; } }
