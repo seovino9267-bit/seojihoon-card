@@ -489,3 +489,21 @@ br.mo { display: none; }
   .s-me > img { width: 84px; height: 105px; }
   .s-cv li { font-size: .95rem; line-height: 1.75; }
 }
+
+/* 11/25 소개 끝 — 이어서 볼 곳 카드(토스 혜택 카드처럼 아이콘+굵은 말+두 줄) */
+.s-next { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 4px; }
+.s-next a { display: flex; flex-direction: column; gap: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 24px 22px; text-decoration: none; transition: border-color .2s, transform .2s; }
+.s-next a:hover { border-color: var(--navy); transform: translateY(-2px); }
+.s-next .clay { width: 52px; height: 52px; margin-bottom: 4px; }
+.s-next strong { color: var(--ink); font-size: 1.15rem; letter-spacing: -0.02em; }
+.s-next span { color: var(--text); font-size: .95rem; line-height: 1.65; flex: 1; }
+.s-next em { font-style: normal; font-weight: 700; color: var(--navy); font-size: .92rem; margin-top: 6px; }
+@media (max-width: 860px) {
+  .s-next { grid-template-columns: 1fr; gap: 12px; }
+  .s-next a { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; row-gap: 4px; padding: 18px 16px; }
+  .s-next .clay { width: 44px; height: 44px; grid-row: 1 / 4; margin: 0; }
+  .s-next em { margin-top: 2px; }
+}
+.s-cv li { display: grid; grid-template-columns: 3em 1fr; }
+.s-cv i { min-width: 0; }
+@media (max-width: 860px) { .s-cv li { grid-template-columns: 2.6em 1fr; } }
