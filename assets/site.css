@@ -507,3 +507,35 @@ br.mo { display: none; }
 .s-cv li { display: grid; grid-template-columns: 3em 1fr; }
 .s-cv i { min-width: 0; }
 @media (max-width: 860px) { .s-cv li { grid-template-columns: 2.6em 1fr; } }
+/* 11/25 이야기 첫 그림 = 인터뷰 영상(설명회 사진은 눈 감은 장면이라 뺌) */
+.s-tale { grid-template-columns: 1fr; gap: 36px; }
+.s-video a.play { position: relative; display: block; }
+.s-video img { aspect-ratio: 900 / 501; object-position: center; }
+.s-video .btnplay { position: absolute; left: 50%; top: 50%; width: 68px; height: 68px; margin: -34px 0 0 -34px; border-radius: 50%; background: color-mix(in srgb, var(--band) 85%, transparent); color: var(--on-band); display: flex; align-items: center; justify-content: center; transition: transform .2s; }
+.s-video a.play:hover .btnplay { transform: scale(1.08); }
+.s-video .btnplay svg { width: 30px; height: 30px; margin-left: 4px; }
+.s-steps { max-width: 760px; }
+.s-crowd { margin: 0 0 56px; max-width: 640px; }
+.s-crowd img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 8px; display: block; }
+.s-crowd figcaption { color: var(--muted); font-size: .85rem; margin-top: 8px; }
+@media (max-width: 860px) {
+  .s-video img { aspect-ratio: 900 / 501; }
+  .s-video .btnplay { width: 52px; height: 52px; margin: -26px 0 0 -26px; }
+  .s-video .btnplay svg { width: 22px; height: 22px; margin-left: 3px; }
+  .s-crowd { margin-bottom: 40px; }
+}
+/* 재생 단추가 얼굴을 가려서 오른쪽 위 알약 단추로 */
+.s-video .btnplay { left: auto; top: auto; right: 16px; bottom: 16px; margin: 0; width: auto; height: auto; padding: 10px 18px 10px 14px; border-radius: 999px; gap: 6px; font-weight: 700; font-size: .95rem; background: color-mix(in srgb, var(--band) 92%, transparent); }
+.s-video .btnplay svg { width: 18px; height: 18px; margin: 0; }
+.s-video .btnplay { top: 16px; bottom: auto; }
+@media (max-width: 860px) { .s-video .btnplay { right: 10px; top: 10px; padding: 7px 13px 7px 10px; font-size: .82rem; width: auto; height: auto; margin: 0; } .s-video .btnplay svg { width: 14px; height: 14px; margin: 0; } }
+.story .s-video img { aspect-ratio: 900 / 501 !important; height: auto; }
+/* 11/25 삼전동 상단 모아타운 보도 카드 */
+.s-press { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: -24px 0 48px; }
+.s-press a { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; transition: border-color .2s; }
+.s-press a:hover { border-color: var(--navy); }
+.s-press i { font-style: normal; font-size: .85rem; color: var(--muted); }
+.s-press strong { color: var(--ink); font-size: 1.02rem; line-height: 1.5; letter-spacing: -0.01em; flex: 1; }
+.s-press em { font-style: normal; font-weight: 700; color: var(--navy); font-size: .88rem; }
+@media (max-width: 860px) { .s-press { grid-template-columns: 1fr; gap: 10px; margin: -8px 0 36px; } .s-press a { padding: 15px 16px; } .s-press strong { font-size: .98rem; } }
+.s-press { margin-top: 0; } .s-proof { margin-bottom: 20px; }
