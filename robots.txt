@@ -8,3 +8,5 @@ Allow: /
 Disallow: /map/
 
 Sitemap: https://seojihoon.kr/sitemap.xml
+
+#DaumWebMasterTool:eb96d618e1a1623222c4296ea996352371339fcc0fea78d536426b43e3788ea5:pdYA2AN84tHnNET51D/IqQ==
