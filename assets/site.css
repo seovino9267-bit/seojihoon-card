@@ -421,3 +421,71 @@ br.mo { display: none; }
 @media (max-width: 860px) { .top .menu { margin-left: auto; } }
 
 .hero .sig strong { line-height: 1.35; }
+
+/* ── 소개 이야기(11/25 · 토스 채용 「팀 문화」 구성 참고): 여는 질문 → 이야기 → 원칙 → 근거 → 사람 ── */
+.story { background: var(--paper); border-top: 1px solid var(--line); margin-top: 80px; }
+.s-open { padding: 120px 0 110px; text-align: center; }
+.s-q { font-size: 2.6rem; font-weight: 800; color: var(--ink); line-height: 1.3; letter-spacing: -0.02em; margin: 0 0 48px; }
+.s-l { font-size: 1.3rem; color: var(--text); margin: 0 0 12px; line-height: 1.6; }
+.s-last { margin-top: 28px; font-weight: 700; color: var(--navy); }
+.s-body { max-width: 980px; padding-bottom: 88px; }
+.s-title { font-size: 2.1rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; margin: 0 0 36px; }
+.s-tale { display: grid; grid-template-columns: 380px 1fr; gap: 48px; align-items: start; }
+.s-photo { margin: 0; }
+.s-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 47% center; border-radius: 8px; display: block; }
+.s-photo figcaption { color: var(--muted); font-size: .85rem; margin-top: 8px; }
+.s-steps { list-style: none; margin: 0; padding: 0; }
+.s-steps li { padding: 0 0 30px 24px; border-left: 2px solid var(--line); position: relative; }
+.s-steps li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--navy); }
+.s-steps li:last-child { padding-bottom: 0; }
+.s-when { display: block; color: var(--navy); font-weight: 700; font-size: .95rem; margin-bottom: 6px; }
+.s-steps p { margin: 0; font-size: 1.08rem; line-height: 1.85; color: var(--text); }
+.s-sub { font-size: 1.5rem; font-weight: 800; color: var(--ink); margin: 80px 0 18px; letter-spacing: -0.02em; }
+.s-rules { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.s-rules details { background: var(--ivory); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; }
+.s-rules summary { list-style: none; cursor: pointer; font-size: 1.2rem; font-weight: 800; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.s-rules summary::-webkit-details-marker { display: none; }
+.s-rules summary::after { content: "+"; font-weight: 400; font-size: 1.5rem; color: var(--navy); line-height: 1; }
+.s-rules details[open] summary::after { content: "\2212"; }
+.s-rules details p { margin: 12px 0 0; color: var(--text); line-height: 1.7; }
+.s-proof { list-style: none; padding: 0; margin: 64px 0 24px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.s-proof li { padding: 24px 20px 24px 0; }
+.s-proof li + li { padding-left: 20px; border-left: 1px solid var(--line); }
+.s-proof b { display: block; font-size: 1.8rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+.s-proof span { display: block; margin-top: 4px; color: var(--text); font-size: .95rem; line-height: 1.55; }
+.s-proof a { color: var(--muted); font-size: .85rem; margin-left: 6px; }
+.story .gallery { grid-template-columns: 1fr 1fr; margin-bottom: 56px; }
+.story .gallery img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 8px; }
+.s-me { display: flex; gap: 24px; align-items: flex-start; padding-top: 40px; border-top: 1px solid var(--line); }
+.s-me > img { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; flex: none; }
+.s-me strong { display: block; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 10px; }
+.s-cv { list-style: none; margin: 0 0 14px; padding: 0; }
+.s-cv li { color: var(--text); line-height: 1.9; }
+.s-cv i { font-style: normal; display: inline-block; min-width: 3em; color: var(--muted); font-size: .9rem; }
+.s-me .links { display: flex; gap: 20px; font-weight: 700; margin: 0; }
+.s-me .links a { text-decoration: none; }
+.story + footer, .story ~ main { }
+/* 내리며 나타나기(스크립트가 있을 때만 숨김 · 움직임 줄이기 설정이면 바로 보임) */
+.js-reveal .story .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.js-reveal .story .reveal.on { opacity: 1; transform: none; }
+@media (max-width: 860px) {
+  .story { margin-top: 56px; }
+  .s-open { padding: 80px 0 72px; }
+  .s-q { font-size: 1.85rem; margin-bottom: 32px; }
+  .s-l { font-size: 1.08rem; }
+  .s-title { font-size: 1.6rem; margin-bottom: 24px; }
+  .s-tale { grid-template-columns: 1fr; gap: 28px; }
+  .s-photo img { aspect-ratio: 3 / 2; }
+  .s-steps p { font-size: 1rem; }
+  .s-sub { font-size: 1.3rem; margin-top: 56px; }
+  .s-rules { grid-template-columns: 1fr; }
+  .s-rules details { padding: 18px 18px; }
+  .s-rules summary { font-size: 1.08rem; }
+  .s-proof { grid-template-columns: 1fr; margin-top: 44px; }
+  .s-proof li, .s-proof li + li { padding: 16px 0; border-left: 0; }
+  .s-proof li + li { border-top: 1px solid var(--line); }
+  .s-proof b { font-size: 1.4rem; }
+  .s-me { gap: 16px; }
+  .s-me > img { width: 84px; height: 105px; }
+  .s-cv li { font-size: .95rem; line-height: 1.75; }
+}
